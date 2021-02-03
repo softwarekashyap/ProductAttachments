@@ -1,52 +1,18 @@
-# Mage2 Module Kashyap ProductAttachments
+# Magento 2 : How to Add Product Grid in UI Form using UIComponent
 
-    ``kashyap/module-productattachments``
+![Alt text](CustomProductGrid.png?raw=true "Magento 2 Add Product Grid in UI Form using UIComponent")
 
- - [Main Functionalities](#markdown-header-main-functionalities)
- - [Installation](#markdown-header-installation)
- - [Configuration](#markdown-header-configuration)
- - [Specifications](#markdown-header-specifications)
- - [Attributes](#markdown-header-attributes)
+This module will helps to show Product Grid in UI Form using UIComponent.
 
-
-## Main Functionalities
-Kashyap Software Product Attachments
-
-## Installation
-\* = in production please use the `--keep-generated` option
-
-### Type 1: Zip file
-
- - Unzip the zip file in `app/code/Kashyap`
- - Enable the module by running `php bin/magento module:enable Kashyap_ProductAttachments`
- - Apply database updates by running `php bin/magento setup:upgrade`\*
- - Flush the cache by running `php bin/magento cache:flush`
-
-### Type 2: Composer
-
- - Make the module available in a composer repository for example:
-    - private repository `repo.magento.com`
-    - public repository `packagist.org`
-    - public github repository as vcs
- - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
- - Install the module composer by running `composer require kashyap/module-productattachments`
- - enable the module by running `php bin/magento module:enable Kashyap_ProductAttachments`
- - apply database updates by running `php bin/magento setup:upgrade`\*
- - Flush the cache by running `php bin/magento cache:flush`
+## Installation without composer
+* Download zip file of this extension
+* Place all the files of the extension in your Magento 2 installation in the folder `app/code/Kashyap/ProductAttachments`
+* Enable the extension: `php bin/magento --clear-static-content module:enable Kashyap_ProductAttachments`
+* Upgrade db scheme: `php bin/magento setup:upgrade`
+* Deply Static Content: `php bin/magento setup:static-content:deploy -f` Developer Mode
+* Deply Static Content: `php bin/magento setup:static-content:deploy` Production Mode
 
 
-## Configuration
+---
 
-
-
-
-## Specifications
-
- - Model
-	- ProductAttachments
-
-
-## Attributes
-
-
-
+[![Alt text](https://www.kashyapsoftware.com/pub/media/logo/stores/1/ks_logo.png "kashyapsoftware.com")](https://www.kashyapsoftware.com/)
