@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/kashyap-productattachments/productattachments" method="POST">
+		<service class="Kashyap\ProductAttachments\Api\ProductAttachmentsRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Kashyap_ProductAttachments::ProductAttachments_save"/>
+		</resources>
+	</route>
+	<route url="/V1/kashyap-productattachments/productattachments/search" method="GET">
+		<service class="Kashyap\ProductAttachments\Api\ProductAttachmentsRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Kashyap_ProductAttachments::ProductAttachments_view"/>
+		</resources>
+	</route>
+	<route url="/V1/kashyap-productattachments/productattachments/:productattachmentsId" method="GET">
+		<service class="Kashyap\ProductAttachments\Api\ProductAttachmentsRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Kashyap_ProductAttachments::ProductAttachments_view"/>
+		</resources>
+	</route>
+	<route url="/V1/kashyap-productattachments/productattachments/:productattachmentsId" method="PUT">
+		<service class="Kashyap\ProductAttachments\Api\ProductAttachmentsRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Kashyap_ProductAttachments::ProductAttachments_update"/>
+		</resources>
+	</route>
+	<route url="/V1/kashyap-productattachments/productattachments/:productattachmentsId" method="DELETE">
+		<service class="Kashyap\ProductAttachments\Api\ProductAttachmentsRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Kashyap_ProductAttachments::ProductAttachments_delete"/>
+		</resources>
+	</route>
+</routes>

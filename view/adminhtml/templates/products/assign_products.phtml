@@ -1,0 +1,20 @@
+<?php
+    $blockGrid = $block->getBlockGrid();
+    $gridJsObjectName = $blockGrid->getJsObjectName();
+?>
+<?= $block->getGridHtml() ?>
+<input type="hidden" name="ks_products" data-form-part="kashyap_productattachments_productattachments_form" id="ks_products" value=""  />
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Kashyap_ProductAttachments/js/assign-products": {
+                "selectedProducts":  <?= /* @escapeNotVerified */ $block->getProductsJson() ?>,
+                "gridJsObjectName": <?= /* @escapeNotVerified */ '"' . $gridJsObjectName . '"' ?: '{}' ?>,
+                "checkProducts":  <?= /* @escapeNotVerified */ $block->getSelectedProductsJson() ?>
+            }
+        }
+    }
+</script>
+<script>
+    require('mage/apply/main').apply();
+</script>
